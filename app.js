@@ -1,1 +1,1 @@
-// code for javascript
+//fixing error, github link was incorrect
