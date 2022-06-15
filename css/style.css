@@ -24,7 +24,7 @@
 
 /* adjusting customer properties for larger screens, mobile first */
 
-@media (min-width: 800px;) {
+@media (min-width: 800px) {
     :root {
         --fs-h1:4.5rem;
         --fs-h2:3.75rem;
