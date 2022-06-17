@@ -4,10 +4,11 @@
 *::after {
     box-sizing: border-box;
 }
-/* setting up root customer properties for font family, font weight, color, font size using rem */
+/* setting up root custom properties for font family, font weight, color, font size using rem */
 :root{
     --ff-primary:'Source Sans Pro', sans-serif;
-    --ff-secondary:'Pacifico', cursive;
+    --ff-secondary:'Shadows Into Light', cursive;
+    --ff-extra:'Pacifico', cursive;
 
     --fw-reg:300;
     --fw-bold:900;
@@ -20,20 +21,14 @@
     --fs-h2:2.25rem;
     --fs-h3:1.25rem;
     --fs-body:1rem;
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25);
 }
 
 /* adjusting customer properties for larger screens, mobile first */
 
-@media (min-width: 800px) {
-    :root {
-        --fs-h1:4.5rem;
-        --fs-h2:3.75rem;
-        --fs-h3:1.5rem;
-        --fs-body:1.125rem;
-    }
-}
 
-/* general styles */
+
+/* --------------general styles---------------- */
 
 body {
     background: var(--clr-light) ;
@@ -44,23 +39,37 @@ body {
     line-height: 1.6;
 }
 
+section {
+    padding: 5rem 2rem;
+}
+
 img {
     display: block;
     max-width: 100%;
 
 }
 
-/* typography */
+/* ----------------typography---------------- */
+@media (min-width: 900px) {
+    :root {
+        --fs-h1:4.5rem;
+        --fs-h2:3.75rem;
+        --fs-h3:1.5rem;
+        --fs-body:1.125rem;
+        
+    }
+}
 
 h1,
 h2,
 h3 {
-    line-height: 1.1;
+    line-height: 1;
     margin: 0;
 }
 
 strong {
-    font-weight: var(--fw-bold)
+    font-weight: var(--fw-bold);
+    margin-bottom: 0;
 }
 
 h1 {font-size: var(--fs-h1);}
@@ -76,7 +85,7 @@ h3 {font-size: var(--fs-h3);}
 }
 
 .section__title--intro {
-    font-weight: var(--fw-reg)
+    font-weight: var(--fw-reg);
 }
 
 /* using display block on strong to make the title always be in it's own line */
@@ -92,5 +101,71 @@ h3 {font-size: var(--fs-h3);}
 .section__subtitle--intro,
 .section__subtitle--about {
     background: var(--clr-accent);
-    font-size: var(--ff-secondary);
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h3);
+    padding: .25em 1em;
+    margin-bottom: 1em;
 }
+
+
+/*---------------- header---------------------------------- */
+
+nav { display:none;}
+
+
+/* ------------------------intro section---------------------- */
+
+.intro {
+    position: relative;
+}
+
+.intro__img{
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px){
+    .intro{
+        display:grid; /*initializes grid display*/
+        grid-column-gap: 1em; /*space between columns*/
+        width:min-content; /*img dissapears, add width min-content to bring back*/
+        margin: 0 auto;/* this centers image in the middle, responsively*/
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+
+    .intro__img{
+        grid-area: img;
+        min-width: 250px;
+        position: relative; /*moves to back of image*/ 
+        z-index: 2;/*sets this as second in priority*/
+    }
+
+    .section__subtitle--intro{
+        align-self: start;
+        grid-column: -1 / 1; /*stretches whole column all the way*/
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;/*stretching element further left*/
+        width: calc(100% + 1.5em);/*calculates and maintains same size to above words */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
