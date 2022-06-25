@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Raymond Yepiz </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> <!--normalize is a css file that helps out even out all differences on all browsers, has website looking the same on all browsers  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+        integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous"><!--fonts using it for social icons, this is the all link, access for all-->
+        <link rel="stylesheet" href="css\style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Sans+Pro:ital,wght@0,200;1,200&family=Source+Serif+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+
+    </head>
+    <body>
+        <!--this is the header section, navigation and such-->
+        <header>
+            <div class="logo">
+                <img src="./images/Zora1.jpg" alt="logo" class="logo__img">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list"><!--using double underscore states that this is sub component of navigation on bem -->
+                    <li class="nav__item"><a href="./index.html" class="nav__link">Home</a></li> <!--links to the sections on my website-->
+                    <li class="nav__item"><a href="./index.html#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="./index.html#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="./index.html#work" class="nav__link">Work</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--this is the intro section-->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                The Title <strong>The Title Of My Project</strong>
+            </h1><!--using double highphen, just like the double underscore it shows that it is a subsection of section__title, not required, just a good tip.-->
+            <p class="section__title section__subtitle--intro">Front-end Developer</p>
+            <img src="images/blurred_background_ray.jpg" alt="Picture of Raymond Smiling" class="intro__img">
+        </section>
+
+
+        <!-------------------this is the portfolio section------------->
+            <div class="portfolio-item-individual">
+            <p>This is a practice paragraph, I only want to see how it looks completed.</p>
+            <img src="./../images." />
+            <p>this is another paragraph that I am going to fix later, for now I just need some text in here to adjust any sizings that might be affected by media queries</p>
+            
+            <p>this is another paragraph that I am going to fix later, for now I just need some text in here to adjust any sizings that might be affected by media queries</p>
+            
+            <p>this is another paragraph that I am going to fix later, for now I just need some text in here to adjust any sizings that might be affected by media queries</p>
+            </div>
+
+        <!--footer section-->
+        <footer class="footer">
+            <!--good place for email address-->
+            <a href="" class="footer__link">
+                <!-- <i class="fa-solid fa-envelope footer__link--email">--> 
+                    rayyepiz@icloud.com 
+                <!--</i>-->
+            </a> 
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a href="" class="social-list__link"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li class="social-list__item">
+                    <a href="" class="social-list__link"><i class="fa-brands fa-github"></i></a>
+             
+            </ul>
+        </footer>
+
+
+
+        <script src="./javascript/app.js"></script>
+
+
+    </body>
+</html>
+
+<!--left of at 54.25 on video setting up the customer properties and general styles-->
+
+<!--use classes for styleing and use id for anchoring, eithor or works but that's what id's are useful for.-->
